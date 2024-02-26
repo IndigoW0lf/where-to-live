@@ -20,10 +20,10 @@ function DataVisualization() {
     fetch('http://localhost:5000/data')
       .then((response) => response.json())
       .then((data) => {
-        // Convert string values to numbers as necessary
+        // Convert string values to numbers, specifically handling values with commas and dollar signs
         const numericData = data.map((item) => ({
           ...item,
-          Value: parseFloat(item.Value.replace(/,/g, '')), // Remove commas for thousands and convert to float
+          Value: parseFloat(item.Value.replace(/[$,]/g, '')), // Remove all commas and dollar signs before converting
         }));
         setData(numericData);
 
@@ -32,11 +32,14 @@ function DataVisualization() {
           new Set(numericData.map((item) => item.Category))
         ).map((category) => ({ value: category, label: category }));
         setCategories(uniqueCategories);
-        setSelectedCategory(uniqueCategories[0]);
+        if (uniqueCategories.length > 0) {
+          setSelectedCategory(uniqueCategories[0]); // Default to first category
+        }
       })
       .catch((error) => console.error('Error:', error));
   }, []);
 
+  // Filter data based on selected category
   const filteredData = selectedCategory
     ? data.filter((item) => item.Category === selectedCategory.value)
     : [];
