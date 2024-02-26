@@ -20,14 +20,19 @@ function DataVisualization() {
     fetch('http://localhost:5000/data')
       .then((response) => response.json())
       .then((data) => {
-        setData(data);
-        const categoryOptions = Array.from(
-          new Set(data.map((item) => item.Category))
+        // Convert string values to numbers as necessary
+        const numericData = data.map((item) => ({
+          ...item,
+          Value: parseFloat(item.Value.replace(/,/g, '')), // Remove commas for thousands and convert to float
+        }));
+        setData(numericData);
+
+        // Extract unique categories
+        const uniqueCategories = Array.from(
+          new Set(numericData.map((item) => item.Category))
         ).map((category) => ({ value: category, label: category }));
-        setCategories(categoryOptions);
-        if (categoryOptions.length > 0) {
-          setSelectedCategory(categoryOptions[0]);
-        }
+        setCategories(uniqueCategories);
+        setSelectedCategory(uniqueCategories[0]);
       })
       .catch((error) => console.error('Error:', error));
   }, []);
@@ -45,8 +50,6 @@ function DataVisualization() {
       />
       <ResponsiveContainer width="100%" height={400}>
         <LineChart
-          width={500}
-          height={300}
           data={filteredData}
           margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
         >
