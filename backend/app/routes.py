@@ -6,7 +6,7 @@ main = Blueprint("main", __name__)
 
 @main.route("/data")
 def get_data():
-    df = pd.read_csv("backend/data/data.csv")
+    df = pd.read_csv("data/data.csv")
     transformed_data = df.melt(
         id_vars=["Category"], var_name="City", value_name="Value"
     )

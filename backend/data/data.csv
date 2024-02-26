@@ -1,23 +1,19 @@
 Category,"Kailua, Hawaii
 ","Columbia, Missouri","Sacramento, California","Portland, Oregon","Charlotte, North Carolina","Seattle, Washington"
-"Population Estimates, July 1, 2022, (V2022)",40323,"128,555","528,001","635,067","897,720","749,256"
-"Population estimates base, April 1, 2020, (V2022)",40514,"126,233","524,924","652,518","874,607","737,018"
-"Population, percent change - April 1, 2020 (estimates base) to July 1, 2022, (V2022)",-0.47%,1.80%,0.60%,-2.70%,2.60%,1.70%
-"Population, Census, April 1, 2020","40,514","126,254","524,943","652,503","874,579","737,015"
-"Population, Census, April 1, 2010","38,635","108,500","466,488","583,776","731,424","608,660"
-"Persons under 5 years, percent",5.30%,5.30%,6.00%,4.40%,6.40%,4.40%
-"Persons under 18 years, percent",22.10%,19.00%,22.00%,16.80%,22.90%,14.00%
-"Persons 65 years and over, percent",20.30%,11.10%,13.80%,14.00%,10.70%,12.80%
-"Female persons, percent",49.90%,51.90%,50.60%,50.20%,51.50%,48.90%
-"White alone, percent",42.50%,75.60%,39.30%,72.10%,43.10%,63.60%
-"Black or African American alone, percent",0.60%,11.20%,12.60%,5.90%,35.20%,6.70%
-"American Indian and Alaska Native alone, percent",0.30%,0.20%,0.80%,1.00%,0.40%,0.60%
+"Population Estimates as of 2022",40323,"128,555","528,001","635,067","897,720","749,256"
+"Population estimates base as of 2020",40514,"126,233","524,924","652,518","874,607","737,018"
+"Population, percent change - 2020 to 2022",-0.47%,1.80%,0.60%,-2.70%,2.60%,1.70%
+"Population, Census, 2020","40,514","126,254","524,943","652,503","874,579","737,015"
+"Population, Census, 2010","38,635","108,500","466,488","583,776","731,424","608,660"
+"Percentage of people under 5 years old",5.30%,5.30%,6.00%,4.40%,6.40%,4.40%
+"Percentage of people under 18 years old",22.10%,19.00%,22.00%,16.80%,22.90%,14.00%
+"Percentage of people 65 years and over",20.30%,11.10%,13.80%,14.00%,10.70%,12.80%
+"Percentage of women",49.90%,51.90%,50.60%,50.20%,51.50%,48.90%
+"Percentage of White alone",42.50%,75.60%,39.30%,72.10%,43.10%,63.60%
 "Asian alone, percent",21.30%,6.10%,19.50%,8.40%,6.60%,16.80%
 "Native Hawaiian and Other Pacific Islander alone, percent",4.90%,0.10%,1.80%,0.60%,0.00%,0.20%
 "Two or More Races, percent",28.50%,5.90%,13.10%,9.20%,7.10%,9.40%
 "Hispanic or Latino, percent",8.00%,3.90%,29.40%,10.30%,15.30%,7.50%
-"White alone, not Hispanic or Latino, percent",40.60%,73.60%,30.80%,68.30%,39.70%,61.20%
-"Foreign born persons, percent, 2018-2022",8.80%,8.30%,21.30%,12.60%,17.40%,19.80%
 "Owner-occupied housing unit rate, 2018-2022",73.90%,48.80%,50.70%,53.30%,52.10%,44.50%
 "Median value of owner-occupied housing units, 2018-2022","$1,208,600","$248,600","$450,500","$523,100","$312,800","$879,900"
 "Median selected monthly owner costs -with a mortgage, 2018-2022","$3,804","$1,593","$2,236","$2,359","$1,666","$3,261"
@@ -25,7 +21,6 @@ Category,"Kailua, Hawaii
 "Median gross rent, 2018-2022","$2,842",$997,"$1,592","$1,530","$1,399","$1,945"
 "Households, 2018-2022","13,262","50,948","196,524","283,896","354,442","345,246"
 "Persons per household, 2018-2022",3.03,2.3,2.62,2.21,2.43,2.05
-"Living in same house 1 year ago, percent of persons age 1 year+, 2018-2022",86.60%,74.70%,85.20%,82.40%,83.10%,76.50%
 "Language other than English spoken at home, percent of persons age 5 years+, 2018-2022",12.60%,10.30%,36.00%,17.90%,22.30%,22.90%
 "Households with a computer, percent, 2018-2022",97.40%,97.00%,96.00%,96.40%,96.10%,97.30%
 "Households with a broadband Internet subscription, percent, 2018-2022",95.10%,88.30%,92.30%,92.60%,91.90%,93.40%
@@ -46,7 +41,6 @@ Category,"Kailua, Hawaii
 "Women-owned employer firms, Reference year 2017",194,558,"1,619","4,610","3,539","4,941"
 "Minority-owned employer firms, Reference year 2017",290,222,"2,875","2,336","3,020","3,760"
 "Nonminority-owned employer firms, Reference year 2017",403,"2,192","4,702","15,216","13,732","15,322"
-"Nonveteran-owned employer firms, Reference year 2017",649,"2,207","7,180","16,480","15,339","17,937"
 "Population per square mile, 2020","5,212.80","1,897.50","5,323.40","4,889.50","2,836.90","8,791.80"
 "Population per square mile, 2010","4,976.20","1,720.10","4,764.20","4,375.30","2,457.10","7,250.90"
 Total jobs in the Technology Sector,1190,2360,34370,48610,56220,170030
