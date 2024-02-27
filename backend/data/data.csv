@@ -1,47 +1,38 @@
-Category,"Kailua, Hawaii
-","Columbia, Missouri","Sacramento, California","Portland, Oregon","Charlotte, North Carolina","Seattle, Washington"
-"Population Estimates as of 2022",40323,"128,555","528,001","635,067","897,720","749,256"
-"Population estimates base as of 2020",40514,"126,233","524,924","652,518","874,607","737,018"
-"Population, percent change - 2020 to 2022",-0.47%,1.80%,0.60%,-2.70%,2.60%,1.70%
+"Category","Kailua, Hawaii","Columbia, Missouri","Sacramento, California","Portland, Oregon","Charlotte, North Carolina","Seattle, Washington"
+"Population Estimates as of 2022","40,323","128,555","528,001","635,067","897,720","749,256"
+"Population change from 2020 to 2022","-0.47","1.8","0.6","-2.7","2.6","1.7"
 "Population, Census, 2020","40,514","126,254","524,943","652,503","874,579","737,015"
 "Population, Census, 2010","38,635","108,500","466,488","583,776","731,424","608,660"
-"Percentage of people under 5 years old",5.30%,5.30%,6.00%,4.40%,6.40%,4.40%
-"Percentage of people under 18 years old",22.10%,19.00%,22.00%,16.80%,22.90%,14.00%
-"Percentage of people 65 years and over",20.30%,11.10%,13.80%,14.00%,10.70%,12.80%
-"Percentage of women",49.90%,51.90%,50.60%,50.20%,51.50%,48.90%
-"Percentage of White alone",42.50%,75.60%,39.30%,72.10%,43.10%,63.60%
-"Asian alone, percent",21.30%,6.10%,19.50%,8.40%,6.60%,16.80%
-"Native Hawaiian and Other Pacific Islander alone, percent",4.90%,0.10%,1.80%,0.60%,0.00%,0.20%
-"Two or More Races, percent",28.50%,5.90%,13.10%,9.20%,7.10%,9.40%
-"Hispanic or Latino, percent",8.00%,3.90%,29.40%,10.30%,15.30%,7.50%
-"Owner-occupied housing unit rate, 2018-2022",73.90%,48.80%,50.70%,53.30%,52.10%,44.50%
-"Median value of owner-occupied housing units, 2018-2022","$1,208,600","$248,600","$450,500","$523,100","$312,800","$879,900"
-"Median selected monthly owner costs -with a mortgage, 2018-2022","$3,804","$1,593","$2,236","$2,359","$1,666","$3,261"
-"Median selected monthly owner costs -without a mortgage, 2018-2022",$783,$587,$640,$838,$567,"$1,081"
-"Median gross rent, 2018-2022","$2,842",$997,"$1,592","$1,530","$1,399","$1,945"
-"Households, 2018-2022","13,262","50,948","196,524","283,896","354,442","345,246"
-"Persons per household, 2018-2022",3.03,2.3,2.62,2.21,2.43,2.05
-"Language other than English spoken at home, percent of persons age 5 years+, 2018-2022",12.60%,10.30%,36.00%,17.90%,22.30%,22.90%
-"Bachelor's degree or higher, percent of persons age 25 years+, 2018-2022",51.70%,55.30%,35.80%,52.50%,46.60%,66.70%
-"With a disability, under age 65 years, percent, 2018-2022",4.80%,9.00%,8.20%,9.40%,5.70%,6.80%
-"In civilian labor force, total, percent of population age 16 years+, 2018-2022",60.70%,65.80%,64.50%,70.90%,71.90%,73.70%
-"In civilian labor force, female, percent of population age 16 years+, 2018-2022",58.80%,63.20%,60.00%,68.60%,66.60%,70.00%
-"Total accommodation and food services sales, 2017 ($1,000)","112,208","463,747","1,613,768","3,281,474","3,396,186","4,918,030"
-"Total retail sales, 2017 ($1,000)","406,957","2,762,904","5,281,648","9,800,849","13,772,181","60,443,530"
-"Mean travel time to work (minutes), workers age 16 years+, 2018-2022",29.6,16.5,25.4,24.8,25.2,27.2
-"Median household income (in 2022 dollars), 2018-2022","$138,363","$60,455","$78,954","$85,876","$74,070","$116,068"
-"Per capita income in past 12 months (in 2022 dollars), 2018-2022","$57,727","$35,625","$39,336","$52,577","$47,476","$77,616"
-"Persons in poverty, percent",4.20%,21.40%,14.80%,12.20%,11.70%,10.10%
-"All employer firms, Reference year 2017",829,"2,949","8,970","20,157","19,560","22,311"
-"Women-owned employer firms, Reference year 2017",194,558,"1,619","4,610","3,539","4,941"
-"Minority-owned employer firms, Reference year 2017",290,222,"2,875","2,336","3,020","3,760"
-"Nonminority-owned employer firms, Reference year 2017",403,"2,192","4,702","15,216","13,732","15,322"
-"Population per square mile, 2020","5,212.80","1,897.50","5,323.40","4,889.50","2,836.90","8,791.80"
-"Population per square mile, 2010","4,976.20","1,720.10","4,764.20","4,375.30","2,457.10","7,250.90"
-Total jobs in the Technology Sector,1190,2360,34370,48610,56220,170030
-Hourly 10th percentile wage,24.63,19.89,28,24.63,26.7,31.81
-Hourly median wage,42,36.44,49.69,49.05,51.57,64.76
-Hourly 90th percentile wage,63.59,58.76,77.72,78.92,80.43,95.95
-Annual 10th percentile wage,51230,41370,58240,51230,55540,66160
-Annual median wage,87360,75800,103360,102020,107260,134700
-Annual 90th percentile wage,132280,122220,161660,164150,167290,199580
+"People under 5 years old","5.3","5.3","6","4.4","6.4","4.4"
+"People under 18 years old","22.1","19","22","16.8","22.9","14"
+"People 65 years and over","20.3","11.1","13.8","14","10.7","12.8"
+"Women population","49.9","51.9","50.6","50.2","51.5","48.9"
+"White population alone","42.5","75.6","39.3","72.1","43.1","63.6"
+"Native Hawaiian and Other Pacific Islander population alone","4.9","0.1","1.8","0.6","0","0.2"
+"Population of Two or More Races","28.5","5.9","13.1","9.2","7.1","9.4"
+"Hispanic or Latino population","8","3.9","29.4","10.3","15.3","7.5"
+"Owner-occupied housing percentage","73.9","48.8","50.7","53.3","52.1","44.5"
+"Median value of owner-occupied housing units","$1,208,600","$248,600","$450,500","$523,100","$312,800","$879,900"
+"Median selected monthly owner costs with a mortgage","$3,804","$1,593","$2,236","$2,359","$1,666","$3,261"
+"Median gross rent","$2,842","$997","$1,592","$1,530","$1,399","$1,945"
+"Number of households","13,262","50,948","196,524","283,896","354,442","345,246"
+"Persons per household","3.03","2.3","2.62","2.21","2.43","2.05"
+"Bachelor's degree or higher","51.7","55.3","35.8","52.5","46.6","66.7"
+"In civilian labor force, total population age 16+ years","60.7","65.8","64.5","70.9","71.9","73.7"
+"In civilian labor force, female population age 16+ years","58.8","63.2","60","68.6","66.6","70"
+"Mean travel time to work (minutes), workers age 16+ years","29.6","16.5","25.4","24.8","25.2","27.2"
+"Median household income (2022)","$138,363","$60,455","$78,954","$85,876","$74,070","$116,068"
+"Per capita income in past 12 months (2022)","$57,727","$35,625","$39,336","$52,577","$47,476","$77,616"
+"Persons in poverty","4.2","21.4","14.8","12.2","11.7","10.1"
+"All employer firms, Reference year 2017","829","2,949","8,970","20,157","19,560","22,311"
+"Women-owned employer firms, Reference year 2017","194","558","1,619","4,610","3,539","4,941"
+"Minority-owned employer firms, Reference year 2017","290","222","2,875","2,336","3,020","3,760"
+"Population per square mile, 2020","5,212.8","1,897.5","5,323.4","4,889.5","2,836.9","8,791.8"
+"Population per square mile, 2010","4,976.2","1,720.1","4,764.2","4,375.3","2,457.1","7,250.9"
+"Total jobs in the Technology Sector","390","2,360","34,370","48,610","56,220","170,030"
+"Hourly 10th percentile wage","$24.63","$19.89","$28.00","$24.63","$26.70","$31.81"
+"Hourly median wage","$42","$36.44","$49.69","$49.05","$51.57","$64.76"
+"Hourly 90th percentile wage","$63.59","$58.76","$77.72","$78.92","$80.43","$95.95"
+"Annual 10th percentile wage","$51,230","$41,370","$58,240","$51,230","$55,540","$66,160"
+"Annual median wage","$87,360","$75,800","$103,360","$102,020","$107,260","$134,700"
+"Annual 90th percentile wage","$132,280","$122,220","$161,660","$164,150","$167,290","$199,580"

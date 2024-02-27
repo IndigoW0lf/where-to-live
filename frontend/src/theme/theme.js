@@ -3,12 +3,19 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#f28482', // Example primary color
+      main: '#ffb5a7',
     },
     secondary: {
-      main: '#f6bd60', // Example secondary color
+      main: '#b0c4b1',
     },
-    // Add additional colors as needed
+    background: {
+      default: '#f8edeb',
+      paper: '#ffffff',
+    },
+    text: {
+      primary: '#4a5759',
+      secondary: '#4a5759',
+    },
   },
 });
 
