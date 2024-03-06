@@ -16,18 +16,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar className="appBar">
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Welcome to Nest Quest
-          </Typography>
-        </Toolbar>
-      </AppBar>
       <div className="hero-section">
-        <Typography variant="h3">Explore. Discover. Connect.</Typography>
-        <Typography variant="subtitle1">
-          Dive into the world of data and make informed decisions with Nest
-          Quest.
+        <Typography variant="h3" style={{ color: '#333' }}>
+          Explore. Discover. Decide.
+        </Typography>
+        <Typography variant="subtitle1" style={{ color: '#333' }}>
+          Dive into the world of locale data to make an informed decision with Nest Quest.
         </Typography>
       </div>
       <Container maxWidth="lg">
