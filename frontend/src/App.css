@@ -1,14 +1,14 @@
 .App {
   text-align: center;
-  background-color: #f8edeb;
+  background-color: #eac5b3;
 }
 
 .MuiPaper-root {
-  background-color: #fdf6f0;
+  background-color: #eac5b3;
 }
 
 .appBar {
-  background: linear-gradient(45deg, #ffb5a7 30%, #f8dfd1 90%);
+  background: linear-gradient(45deg, #ffb5a7 30%, #eac5b3 90%);
 }
 
 .hero-section {

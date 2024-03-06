@@ -54,7 +54,7 @@ const DemographicsPieCharts = ({ data }) => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: '#6f6a76', padding: '20px' }}>
+    <div style={{ backgroundColor: '#7b8472', padding: '20px' }}>
       <h2
         style={{ textAlign: 'center', marginBottom: '18px', color: '#eae5e0' }}
       >
@@ -67,9 +67,18 @@ const DemographicsPieCharts = ({ data }) => {
           alignItems: 'flex-start',
         }}
       >
-        {/* Legend */}
-        <div style={{ width: '15%', textAlign: 'left', padding: '8px' }}>
-          <h3 style={{ color: '#eae5e0' }}>Legend</h3>
+        {/* Legend with only border */}
+        <div
+          style={{
+            width: '15%',
+            textAlign: 'left',
+            padding: '10px',
+            border: '2px solid #eae5e0',
+            borderRadius: '10px',
+            color: '#eae5e0',
+          }}
+        >
+          <h3 style={{ margin: '0 0 10px 0' }}>Legend</h3>
           <p>
             <span style={{ color: '#ffb5a7' }}>■ White</span>
           </p>

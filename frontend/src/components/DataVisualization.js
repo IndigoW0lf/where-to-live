@@ -15,11 +15,15 @@ import {
 const monetaryCategories = [
   'Median value of owner-occupied housing units',
   'Median selected monthly owner costs with a mortgage',
-  'Median gross rent',
+  'Median Gross rent',
   'Per capita income in past 12 months (2022)',
   'Annual 10th percentile wage',
   'Annual median wage',
   'Annual 90th percentile wage',
+  'Median household income (2022)',
+  'Hourly 10th percentile wage',
+  'Hourly median wage',
+  'Hourly 90th percentile wage',
 ];
 
 const percentageCategories = [
@@ -40,7 +44,7 @@ const percentageCategories = [
 
 function DataVisualization() {
   const [data, setData] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState(null); // Initial state as null for the placeholder
   const [categories, setCategories] = useState([]);
   const [chartData, setChartData] = useState([]);
 
@@ -48,45 +52,44 @@ function DataVisualization() {
     fetch('http://localhost:5000/data')
       .then((response) => response.json())
       .then((fetchedData) => {
-        const categoryOptions = Object.keys(fetchedData[0] ?? {}).filter(
-          (key) => !['City', 'Lat', 'Lon'].includes(key)
-        );
-        setCategories(
-          categoryOptions.map((category) => ({
+        const categoryOptions = Object.keys(fetchedData[0] ?? {})
+          .filter((key) => !['City', 'Lat', 'Lon'].includes(key))
+          .map((category) => ({
             value: category,
             label: category,
-          }))
-        );
+          }));
 
-        if (categoryOptions.length > 0) {
-          setSelectedCategory(categoryOptions[0]);
-        }
-
+        setCategories([
+          { value: '', label: 'Select a value to compare' },
+          ...categoryOptions,
+        ]); // Add placeholder option
         setData(fetchedData);
       })
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
   useEffect(() => {
-    const preparedData = data
-      .map((item) => {
-        let value = item[selectedCategory];
-
-        if (typeof value === 'string') {
-          if (monetaryCategories.includes(selectedCategory)) {
-            value = parseFloat(value.replace(/[$,]/g, ''));
-          } else if (percentageCategories.includes(selectedCategory)) {
-            value = parseFloat(value.replace('%', ''));
+    if (selectedCategory) {
+      // Check if a category is selected
+      const preparedData = data
+        .map((item) => {
+          let value = item[selectedCategory];
+          if (
+            monetaryCategories.includes(selectedCategory) ||
+            percentageCategories.includes(selectedCategory)
+          ) {
+            value =
+              typeof value === 'string'
+                ? parseFloat(value.replace(/[$,%]/g, ''))
+                : value;
           }
-        } else {
-          value = parseFloat(value);
-        }
 
-        return { City: item.City, Value: isNaN(value) ? null : value };
-      })
-      .filter((item) => item.Value !== null);
+          return { City: item.City, Value: isNaN(value) ? null : value };
+        })
+        .filter((item) => item.Value !== null);
 
-    setChartData(preparedData);
+      setChartData(preparedData);
+    }
   }, [selectedCategory, data]);
 
   const formatTooltipValue = (value) => {
@@ -95,15 +98,17 @@ function DataVisualization() {
     } else if (percentageCategories.includes(selectedCategory)) {
       return `${value}%`;
     }
-    return value.toString();
+    return value.toLocaleString();
   };
 
   return (
     <div>
       <Select
         options={categories}
-        onChange={(option) => setSelectedCategory(option.value)}
+        onChange={(option) => setSelectedCategory(option ? option.value : null)}
         value={categories.find((option) => option.value === selectedCategory)}
+        placeholder="Select a value to compare"
+        isClearable
       />
       <ResponsiveContainer width="100%" height={400}>
         <LineChart
@@ -113,7 +118,7 @@ function DataVisualization() {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="City" />
           <YAxis />
-          <Tooltip formatter={formatTooltipValue} />
+          <Tooltip formatter={(value) => formatTooltipValue(value)} />
           <Legend />
           <Line
             type="monotone"
