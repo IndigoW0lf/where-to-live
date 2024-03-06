@@ -42,40 +42,61 @@ function DataVisualization() {
   const [data, setData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [categories, setCategories] = useState([]);
+  const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:5000/data')
       .then((response) => response.json())
-      .then((data) => {
-        const numericData = data.map((item) => {
-          let value = item.Value.replace(/[^0-9.-]+/g, ''); // Remove $ and % for numeric parsing
-          value = parseFloat(value);
-          return { ...item, Value: value };
-        });
-        setData(numericData);
-        const uniqueCategories = [
-          ...new Set(numericData.map((item) => item.Category)),
-        ].map((category) => ({ value: category, label: category }));
-        setCategories(uniqueCategories);
-        if (uniqueCategories.length)
-          setSelectedCategory(uniqueCategories[0].value);
+      .then((fetchedData) => {
+        const categoryOptions = Object.keys(fetchedData[0] ?? {}).filter(
+          (key) => !['City', 'Lat', 'Lon'].includes(key)
+        );
+        setCategories(
+          categoryOptions.map((category) => ({
+            value: category,
+            label: category,
+          }))
+        );
+
+        if (categoryOptions.length > 0) {
+          setSelectedCategory(categoryOptions[0]);
+        }
+
+        setData(fetchedData);
       })
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
-  const formatTooltipValue = (value, name, props) => {
-    const category = props.payload.Category;
-    if (monetaryCategories.includes(category)) {
+  useEffect(() => {
+    const preparedData = data
+      .map((item) => {
+        let value = item[selectedCategory];
+
+        if (typeof value === 'string') {
+          if (monetaryCategories.includes(selectedCategory)) {
+            value = parseFloat(value.replace(/[$,]/g, ''));
+          } else if (percentageCategories.includes(selectedCategory)) {
+            value = parseFloat(value.replace('%', ''));
+          }
+        } else {
+          value = parseFloat(value);
+        }
+
+        return { City: item.City, Value: isNaN(value) ? null : value };
+      })
+      .filter((item) => item.Value !== null);
+
+    setChartData(preparedData);
+  }, [selectedCategory, data]);
+
+  const formatTooltipValue = (value) => {
+    if (monetaryCategories.includes(selectedCategory)) {
       return `$${value.toLocaleString()}`;
-    } else if (percentageCategories.includes(category)) {
+    } else if (percentageCategories.includes(selectedCategory)) {
       return `${value}%`;
     }
-    return value.toLocaleString();
+    return value.toString();
   };
-
-  const filteredData = selectedCategory
-    ? data.filter((item) => item.Category === selectedCategory)
-    : [];
 
   return (
     <div>
@@ -86,7 +107,7 @@ function DataVisualization() {
       />
       <ResponsiveContainer width="100%" height={400}>
         <LineChart
-          data={filteredData}
+          data={chartData}
           margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
@@ -97,6 +118,7 @@ function DataVisualization() {
           <Line
             type="monotone"
             dataKey="Value"
+            name={selectedCategory}
             stroke="#8884d8"
             activeDot={{ r: 8 }}
           />

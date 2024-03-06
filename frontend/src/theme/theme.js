@@ -1,3 +1,4 @@
+// theme.js
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -8,13 +9,16 @@ const theme = createTheme({
     secondary: {
       main: '#b0c4b1',
     },
+    accent: {
+      main: '#f67280',
+    },
     background: {
       default: '#f8edeb',
       paper: '#ffffff',
     },
     text: {
       primary: '#4a5759',
-      secondary: '#4a5759',
+      secondary: '#6e8385',
     },
   },
 });
